@@ -1,0 +1,91 @@
+$date
+	Sat Nov  5 14:46:47 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module Q3_tb $end
+$var wire 1 ! s $end
+$var wire 1 " c $end
+$var reg 1 # x $end
+$var reg 1 $ y $end
+$var reg 1 % z $end
+$scope module Q_3 $end
+$var wire 1 " c $end
+$var wire 1 ! s $end
+$var wire 1 # x $end
+$var wire 1 $ y $end
+$var wire 1 % z $end
+$var wire 1 & ha2_s $end
+$var wire 1 ' ha2_c $end
+$var wire 1 ( ha1_s $end
+$var wire 1 ) ha1_c $end
+$scope module h1 $end
+$var wire 1 ) c $end
+$var wire 1 ( s $end
+$var wire 1 # x $end
+$var wire 1 $ y $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 ' c $end
+$var wire 1 & s $end
+$var wire 1 % x $end
+$var wire 1 ( y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#20
+1!
+1&
+1%
+#40
+1(
+0%
+1$
+#60
+1"
+0!
+0&
+1'
+1%
+#80
+0"
+1!
+1&
+0'
+0%
+0$
+1#
+#100
+1"
+0!
+0&
+1'
+1%
+#120
+0'
+0(
+1)
+0%
+1$
+#140
+1!
+1&
+1%
+#160

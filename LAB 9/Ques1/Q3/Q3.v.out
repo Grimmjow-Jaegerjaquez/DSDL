@@ -1,0 +1,59 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55c740ffcfb0 .scope module, "Q3" "Q3" 2 7;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /INPUT 1 "y";
+    .port_info 2 /INPUT 1 "z";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "c";
+L_0x55c741010fb0 .functor BUFZ 1, L_0x55c741010d40, C4<0>, C4<0>, C4<0>;
+L_0x55c741011040 .functor OR 1, L_0x55c741010c60, L_0x55c741010f20, C4<0>, C4<0>;
+v0x55c741010410_0 .net "c", 0 0, L_0x55c741011040;  1 drivers
+v0x55c7410104f0_0 .net "ha1_c", 0 0, L_0x55c741010c60;  1 drivers
+v0x55c7410105b0_0 .net "ha1_s", 0 0, L_0x55c741010ba0;  1 drivers
+v0x55c7410106d0_0 .net "ha2_c", 0 0, L_0x55c741010f20;  1 drivers
+v0x55c741010770_0 .net "ha2_s", 0 0, L_0x55c741010d40;  1 drivers
+v0x55c741010860_0 .net "s", 0 0, L_0x55c741010fb0;  1 drivers
+o0x7f041645d078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55c741010900_0 .net "x", 0 0, o0x7f041645d078;  0 drivers
+o0x7f041645d0a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55c7410109d0_0 .net "y", 0 0, o0x7f041645d0a8;  0 drivers
+o0x7f041645d1f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55c741010aa0_0 .net "z", 0 0, o0x7f041645d1f8;  0 drivers
+S_0x55c740ffd140 .scope module, "h1" "halfadd" 2 11, 2 1 0, S_0x55c740ffcfb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /INPUT 1 "y";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_0x55c741010ba0 .functor XOR 1, o0x7f041645d078, o0x7f041645d0a8, C4<0>, C4<0>;
+L_0x55c741010c60 .functor AND 1, o0x7f041645d078, o0x7f041645d0a8, C4<1>, C4<1>;
+v0x55c740ffd320_0 .net "c", 0 0, L_0x55c741010c60;  alias, 1 drivers
+v0x55c74100fb80_0 .net "s", 0 0, L_0x55c741010ba0;  alias, 1 drivers
+v0x55c74100fc40_0 .net "x", 0 0, o0x7f041645d078;  alias, 0 drivers
+v0x55c74100fce0_0 .net "y", 0 0, o0x7f041645d0a8;  alias, 0 drivers
+S_0x55c74100fe20 .scope module, "h2" "halfadd" 2 12, 2 1 0, S_0x55c740ffcfb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "x";
+    .port_info 1 /INPUT 1 "y";
+    .port_info 2 /OUTPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "c";
+L_0x55c741010d40 .functor XOR 1, o0x7f041645d1f8, L_0x55c741010ba0, C4<0>, C4<0>;
+L_0x55c741010f20 .functor AND 1, o0x7f041645d1f8, L_0x55c741010ba0, C4<1>, C4<1>;
+v0x55c741010090_0 .net "c", 0 0, L_0x55c741010f20;  alias, 1 drivers
+v0x55c741010150_0 .net "s", 0 0, L_0x55c741010d40;  alias, 1 drivers
+v0x55c741010210_0 .net "x", 0 0, o0x7f041645d1f8;  alias, 0 drivers
+v0x55c7410102b0_0 .net "y", 0 0, L_0x55c741010ba0;  alias, 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Q3.v";
